@@ -8,10 +8,10 @@ const Connect = () => {
         <div className="footer-section">
           <p className="footer-label">CONTACT US</p>
           <a href="https://wa.me/123434546" className="footer-link">
-            <FaWhatsapp /> +9178949 86863
+            <FaWhatsapp /> 7614056695
           </a>
           <a href="mailto:COKEXclub@gmail.com" className="footer-link">
-            <FaEnvelope /> COKEXCLUB@gmail.com
+            <FaEnvelope /> kp346949@gmail.com
           </a>
         </div>
         <div className="footer-section">
@@ -23,7 +23,7 @@ const Connect = () => {
       <div className="footer-bottom">
         <h2 className="main-footer-logo">ZYNDICO</h2>
          <p className="copyright">
-          © 2026 ZYNDICO S.p.A. - All rights reserved.
+          © 2026 ZYNDICO  - All rights reserved.
         </p>
       </div>
     </footer>
