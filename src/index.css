@@ -29,8 +29,9 @@ body{
   background-color:transparent;
   border:none;
   font-family: "Quicksand", sans-serif;
-  font-size:1.5rem;
+  font-size:1.1rem;
   color:goldenrod;
+  height:1rem;
 }
 .nav-button:hover{
   background:rgba(0, 26, 8, 0.996);
@@ -191,7 +192,7 @@ video{
 
 .product-name {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
 }
 .suits {
@@ -262,7 +263,7 @@ a {
   top:20%;
 }
 .footer-container {
-  background-color: #180429;
+  background-color: #022015;
   color: #fff;
   padding: 4rem 2rem 2rem 2rem;
   font-family: 'Times New Roman', Times, serif;
@@ -418,6 +419,22 @@ a {
   .latest {
     width: 45%;       
   }
+  .product-name {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+  }
+  .nav-button{
+    width:100%;
+    padding:1rem;
+    transition: ease-in 0.2s;
+    background-color:transparent;
+    border:none;
+    font-family: "Quicksand", sans-serif;
+    font-size:1.4rem;
+    color:goldenrod;
+    height:4rem;
+  }
 
 .suits {
     width: 100vw;
@@ -515,7 +532,7 @@ a {
     margin: 0;
   }
   a{
-    font-size:1.7rem;
+    font-size:1.5rem;
   }
 
   .video-wrapper {
