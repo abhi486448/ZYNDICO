@@ -5,7 +5,7 @@ body{
 
 }
 :root {
-  background-color: #7651a0fe;
+  background-color: rgba(0, 44, 15, 0.996);
 }
 .nav {
   width: 100%;
@@ -15,20 +15,26 @@ body{
   display: flex;
   flex-direction: column; 
   box-sizing: border-box;
-  background: #4f00778a; 
+  background: #011d12c7; 
   padding: 10px 20px;
   backdrop-filter: blur(100px); 
   margin: 0;
   transition: all 0.4s ease-in-out;
   position: fixed;
 }
-li{
+.nav-button{
   width:100%;
   padding:1rem;
-  transition: ease-in 1s;
+  transition: ease-in 0.2s;
+  background-color:transparent;
+  border:none;
+  font-family: "Quicksand", sans-serif;
+  font-size:1.5rem;
+  color:goldenrod;
 }
-li:hover{
-  background:linear-gradient(90deg,rgb(58, 0, 97),rgba(0, 0, 0, 0));
+.nav-button:hover{
+  background:rgba(0, 26, 8, 0.996);
+  cursor: pointer;
 
 }
 .nav-container {
@@ -104,7 +110,7 @@ video{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #775891;
+  background-color: #305842;
 }
 .video-wrapper {
   position: relative;
@@ -133,7 +139,7 @@ video{
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  filter: sepia(100%) saturate(250%) hue-rotate(240deg) brightness(1) contrast(1.1);
+  filter: sepia(100%) saturate(250%) hue-rotate(120deg) brightness(0.45) contrast(1.3);
 }
 
 .video-title {
@@ -185,7 +191,7 @@ video{
 
 .product-name {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-top: 0.5rem;
 }
 .suits {
@@ -195,7 +201,7 @@ video{
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: rgba(39, 4, 44, 0);
+    background-color: rgba(4, 44, 31, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -345,7 +351,7 @@ a {
 }
 
 .product-card {
-    background: #e7d1ff;
+    background: #ffffff;
     transition: transform 0.3s ease;
     text-align: center;
 }
@@ -508,6 +514,9 @@ a {
     overflow-x: hidden; 
     margin: 0;
   }
+  a{
+    font-size:1.7rem;
+  }
 
   .video-wrapper {
     width: 100vw;
@@ -532,7 +541,7 @@ a {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: #180429;
+    background-color: #011d12;
     padding: 4rem 0;
     display: flex;
     flex-direction: column;
@@ -553,7 +562,7 @@ a {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: rgba(39, 4, 44, 0);
+    background-color: rgba(4, 44, 27, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -569,6 +578,7 @@ a {
     object-fit: cover;  
     display: block;
   }
+
 
   .suitsButton {
     position: absolute;

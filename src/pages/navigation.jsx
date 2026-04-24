@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const navRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,8 +14,20 @@ function Navigation() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
     return (
-        <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
+        <nav ref={navRef} className={`nav ${isScrolled ? 'scrolled' : ''}`}>
             <div className="nav-container">
                 <div className="nav-header">
                     {/* Burger / Toggle */}
@@ -31,12 +44,12 @@ function Navigation() {
 
                 <div className={`nav-collapse ${isOpen ? 'show' : ''}`}>
                     <ul className="nav-links">
-                        <li><Link to="/shirts" onClick={() => setIsOpen(false)}>Shirts</Link></li>
-                        <li><Link to="/tshirts" onClick={() => setIsOpen(false)}>T-Shirts</Link></li>
-                        <li><Link to="/hoodies" onClick={() => setIsOpen(false)}>Hoodies</Link></li>
-                        <li><Link to="/sneakers" onClick={() => setIsOpen(false)}>Sneakers</Link></li>
-                        <li><Link to="/shoes" onClick={() => setIsOpen(false)}>Shoes</Link></li>
-                        <li><Link to="/highend" onClick={() => setIsOpen(false)}>Bharat Bespoke</Link></li>
+                        <li><Link to="/shirts" onClick={() => setIsOpen(false)}><button className="nav-button">Shirts</button></Link></li>
+                        <li><Link to="/tshirts" onClick={() => setIsOpen(false)}><button className="nav-button">T-Shirts</button></Link></li>
+                        <li><Link to="/hoodies" onClick={() => setIsOpen(false)}><button className="nav-button">Hoodies</button></Link></li>
+                        <li><Link to="/sneakers" onClick={() => setIsOpen(false)}><button className="nav-button">Sneakers</button></Link></li>
+                        <li><Link to="/shoes" onClick={() => setIsOpen(false)}><button className="nav-button">Shoes</button></Link></li>
+                        <li><Link to="/highend" onClick={() => setIsOpen(false)}><button className="nav-button">Bharat Bespoke</button></Link></li>
                     </ul>
                 </div>
             </div>
