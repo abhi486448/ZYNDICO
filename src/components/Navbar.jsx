@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-function Navigation() {
+function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const navRef = useRef(null);
@@ -27,7 +27,7 @@ function Navigation() {
     }, []);
 
     return (
-        <nav ref={navRef} className={`nav ${isScrolled ? 'scrolled' : ''}`}>
+        <div ref={navRef} className={`nav ${isScrolled ? 'scrolled' : ''}`}>
             <div className="nav-container">
                 <div className="nav-header">
                     {/* Burger / Toggle */}
@@ -53,8 +53,8 @@ function Navigation() {
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
     );
 }
 
-export default Navigation;
+export default Navbar;
