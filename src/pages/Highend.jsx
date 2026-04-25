@@ -1,7 +1,7 @@
-import myVideo from "../assets/suit.mp4";
-import compvideo from "../assets/fsuit.mp4";
+import myVideo from "../assets/videos/suit.mp4";
+import compvideo from "../assets/videos/fsuit.mp4";
 
-const importedImages = import.meta.glob("../suit/*.jpg", { eager: true });
+const importedImages = import.meta.glob("../assets/images/suit/*.jpg", { eager: true });
 
 const suitDetails = {
     "1.jpg": { name: "Italian Charcoal Suit", price: "Rs 15,000" },

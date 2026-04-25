@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import myVideo from "../assets/intro.mp4";
+import myVideo from "../assets/videos/intro.mp4";
 import shirt7 from "../shirt/7.jpg";
 import t_shirt8 from "../t-shirt/7.jpg";
 import suit2 from "../suit/3.jpg";

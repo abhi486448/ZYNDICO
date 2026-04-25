@@ -1,5 +1,5 @@
-import hoodiesVideo from "../assets/hoodies.mp4";
-const importedImages = import.meta.glob("../hoodies/*.jpg", { eager: true });
+import hoodiesVideo from "../assets/videos/hoodies.mp4";
+const importedImages = import.meta.glob("../assets/images/hoodies/*.jpg", { eager: true });
 
 const hoodieDetails = {
     "1.jpg": { name: "Oversized Heavy Fleece", price: "Rs 3,200" },

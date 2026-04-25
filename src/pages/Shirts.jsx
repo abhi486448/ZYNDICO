@@ -1,6 +1,6 @@
-import myVideo from "../assets/shirt.mp4";
+import myVideo from "../assets/videos/shirt.mp4";
 
-const importedImages = import.meta.glob("../shirt/*.jpg", { eager: true });
+const importedImages = import.meta.glob("../assets/images/shirt/*.jpg", { eager: true });
 
 const productDetails = {
     "1.jpg": { name: "Vintage Oversized Tee", price: "Rs 1,200" },

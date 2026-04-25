@@ -1,6 +1,6 @@
-import myVideo from "../assets/shoes.mp4";
+import myVideo from "../assets/videos/shoes.mp4";
 
-const importedImages = import.meta.glob("../shoes/*.jpg", { eager: true });
+const importedImages = import.meta.glob("../assets/images/shoes/*.jpg", { eager: true });
 
 const shoeDetails = {
     "1.jpg": { name: "Arctic White Trainers", price: "Rs 4,500" },

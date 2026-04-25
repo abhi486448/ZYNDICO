@@ -1,5 +1,5 @@
-import sneakVideo from "../assets/sneakers.mp4";
-const importedImages = import.meta.glob("../sneaker/*.jpg", { eager: true });
+import sneakVideo from "../assets/videos/sneakers.mp4";
+const importedImages = import.meta.glob("../assets/images/sneaker/*.jpg", { eager: true });
 
 const sneakDetails = {
     "1.jpg": { name: "Phantom Low-Top", price: "Rs 5,500" },

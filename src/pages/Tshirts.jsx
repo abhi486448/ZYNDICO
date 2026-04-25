@@ -1,5 +1,5 @@
-import tshirtVideo from "../assets/tshirt.mp4";
-const importedImages = import.meta.glob("../t-shirt/*.jpg", { eager: true });
+import tshirtVideo from "../assets/videos/tshirt.mp4";
+const importedImages = import.meta.glob("../assets/images/t-shirt/*.jpg", { eager: true });
 
 const details = {
     "1.jpg": { name: "Boxy Fit Basic", price: "Rs 999" },
