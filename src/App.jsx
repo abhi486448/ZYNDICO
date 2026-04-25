@@ -1,12 +1,12 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import Home from "./pages/home";
-import Shirt from "./pages/shirts";
-import Tshirt from "./pages/tshirts";
-import Hoodies from "./pages/hoodies";
-import Sneaker from "./pages/sneaker";
-import Shoes from "./pages/shoes";
-import Highend from "./pages/highend";
+import Home from "./pages/Home";
+import Shirt from "./pages/Shirts";
+import Tshirt from "./pages/Tshirts";
+import Hoodies from "./pages/Hoodies";
+import Sneaker from "./pages/Sneaker";
+import Shoes from "./pages/Shoes";
+import Highend from "./pages/Highend";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
