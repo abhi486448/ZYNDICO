@@ -2,7 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react(), tailwindcss()],
-  base: '/ZYNDICO/', // Make sure 'ZYNDICO' matches your GitHub repository name exact casing
-})
+  // Use '/ZYNDICO/' for production builds (GitHub Pages), but '/' for local dev
+  base: command === 'build' ? '/ZYNDICO/' : '/',
+}))
