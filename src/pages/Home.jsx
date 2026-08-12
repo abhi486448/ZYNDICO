@@ -8,7 +8,7 @@ import shoes5 from "../assets/images/sneaker/2.jpg";
 import shoes6 from "../assets/images/shoes/1.jpg";
 import shoes7 from "../assets/images/shoes/4.jpg";
 import suit1 from "../assets/images/suit/4.png";
-import CategoryMarquee from "../components/Marq";
+import CategoryMarquee from "../components/marq";
 
 function Home() {
 
