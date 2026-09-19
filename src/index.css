@@ -1,7 +1,8 @@
 @import "tailwindcss";
+
 /* --- Global & Root --- */
 :root {
-  background: linear-gradient(60deg,#001a09fe,#0c0c0cfe);
+  background: linear-gradient(60deg, #001a09fe, #0c0c0cfe);
 }
 
 body {
@@ -9,61 +10,28 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "Belleza", sans-serif;
-
+  color: #ffffff;
 }
 
 a {
   text-decoration: none;
   font-family: "Belleza", sans-serif;
-  color: #000;
+  color: inherit;
 }
 
- .video-wrapper {
-  position: relative; 
+/* --- Hero / Cover Video Section --- */
+.video-wrapper {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.subheading { 
-  font-size:3rem;
-  top:5%; 
-  color:#ffff;
-}
-
-.shirt-container {
-   background: linear-gradient(180deg,#001407fe,#1a0000fe);
-   width: 100%;
-   height: 100vh;
-   padding:5rem 0rem 0rem 0rem;
-   z-index:0;
-   flex-direction: column;
-   display:flex;
-}
-
-.discrip{
-   padding:2rem 1rem;
-   text-align:left;
-   color: #fdfdfd;
-   margin-top: auto;
-   background: linear-gradient( 180deg,rgba(0, 0, 0, 0) 0%,rgba(12, 12, 12, 0.562) 40%,rgba(12, 12, 12, 0.822) 70% );
-   height:auto;
-   font-family: "Montserrat Alternates", sans-serif;
-   font-size:0.8rem;
-   display:flex;
-   justify-content: center;
-   align-items:center;
-}
-
-.title{
-  padding:0rem 0rem 0rem 1rem;
-  font-size:3rem;
-  color:#bdbdbd;  
-}
-
-.intro, .introall {
+.intro,
+.introall {
   position: absolute;
   top: 0;
   left: 0;
@@ -80,54 +48,89 @@ a {
 .video-title {
   position: relative;
   z-index: 2;
-  color:goldenrod;
+  color: goldenrod;
   font-family: "Belleza", sans-serif;
   pointer-events: none;
   font-weight: 400;
   font-size: 4rem;
   animation: fadeIn 2s ease-out forwards;
-  text-align:center;
-  margin:auto;
-  letter-spacing:1rem;
-}
-
-.suit-mobile {
-    display: block;
-}
-.suit-desktop {
-    display: none;
-}
-
-.description{
-  z-index:3;
+  text-align: center;
+  margin: auto;
+  letter-spacing: 1rem;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.src1 {
-  display: grid; 
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: 1fr;             
+/* --- Shirt / Feature Section --- */
+.shirt-container {
+  background: linear-gradient(180deg, #001407fe, #1a0000fe);
   width: 100%;
+  min-height: 100vh; /* Changed from fixed 100vh to allow dynamic content growth */
+  height: auto;
+  padding: 5rem 0 0 0;
+  z-index: 0;
+  flex-direction: column;
+  display: flex;
 }
-.heading{
-  font-size:2rem;
+
+.title {
+  padding: 0 0 0 1rem;
+  font-size: 3rem;
+  color: #bdbdbd;
+}
+
+.discrip {
+  padding: 2rem 1rem;
+  text-align: left;
+  color: #fdfdfd;
+  margin-top: auto;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(12, 12, 12, 0.562) 40%,
+    rgba(12, 12, 12, 0.822) 70%
+  );
+  height: auto;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Display Grid (Mobile First) --- */
+.src1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 1rem;
+}
+
+.heading {
+  font-size: 2rem;
   text-align: center;
-  margin:1rem;
+  margin: 1rem;
 }
+
 .latest {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
 }
 
 .latest img {
-  width: 100%;          
+  width: 100%;
   height: 15rem;
   object-fit: cover;
 }
@@ -136,15 +139,13 @@ a {
   color: #fff;
   font-size: 0.8rem;
   margin-top: 0.5rem;
-  font-family: "Montserrat ", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-
+/* --- Banner / Suits Section --- */
 .suits {
-  width: 100vw;
+  width: 100%; /* Fixed viewport breakout bug */
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,32 +154,40 @@ a {
 }
 
 .latest1 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 60vh;
+  max-height: 100vh;
   object-fit: cover;
   display: block;
 }
 
-.subheading, .subdetail {
+.subheading,
+.subdetail {
   position: absolute;
   z-index: 5;
   text-align: center;
   color: rgb(247, 247, 247);
 }
 
+.subheading {
+  font-size: 3rem;
+  top: 5%;
+}
+
 .subdetail {
-  font-family: 'Quicksand';
+  font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   margin: 1rem;
   top: 20%;
 }
 
-.linking, .suitsButton {
+.linking,
+.suitsButton {
   background-color: rgba(244, 244, 244, 0.852);
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .linking {
@@ -197,38 +206,58 @@ a {
   z-index: 5;
 }
 
+/* --- Main Product Grid (Mobile) --- */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  width: 100%;
   max-width: 1200px;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .product-card {
-  color:#ffffff;
+  color: #ffffff;
   text-align: left;
-  font-size:0.7rem;
+  font-size: 0.7rem;
 }
 
 .image-wrapper img {
   width: 100%;
   height: auto;
   aspect-ratio: 1/1;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .product-info {
-  padding:0.9rem 0.5rem 0.9rem 0.5rem;
+  padding: 0.9rem 0.5rem;
   display: flex;
-  align-items: center;      
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  box-sizing: border-box; 
-  background:rgba(12, 12, 12, 0.582);
+  box-sizing: border-box;
+  background: rgba(12, 12, 12, 0.582);
   font-family: "Montserrat Alternates", sans-serif;
 }
 
-.price { color:goldenrod;font-size:0.8rem; font-family: "Montserrat Alternates", sans-serif;text-align: right;font-weight:100;}
+.price {
+  color: goldenrod;
+  font-size: 0.8rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: right;
+  font-weight: 100;
+}
 
+.suit-mobile {
+  display: block;
+}
+.suit-desktop {
+  display: none;
+}
+.description {
+  z-index: 3;
+}
 
 /* --- Footer --- */
 .footer-container {
@@ -248,14 +277,15 @@ a {
   width: 100%;
   justify-content: space-around;
   margin-bottom: 3rem;
-  font-size:0.8rem;
+  font-size: 0.8rem;
 }
 
-.footerheading{
-  color:goldenrod;
+.footerheading {
+  color: goldenrod;
   font-family: "Belleza", sans-serif;
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
+
 .to-top {
   border: 1px solid goldenrod;
   color: goldenrod;
@@ -264,51 +294,113 @@ a {
   padding: 0.2rem 0.7rem;
   margin: 0.5rem;
   z-index: 5;
-  position: fixed;  
-  bottom: 10px;     
-  right: 5px;     
-  cursor:pointer;
-}
-.to-top:hover{
-  color:rgb(6, 15, 0);
-  background:goldenrod;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  cursor: pointer;
 }
 
-.footer-section { display: flex; flex-direction: column; gap: 1rem;  font-family: "Montserrat Alternates", sans-serif; }
-.footer-label { font-size: 0.8rem; color: goldenrod;  font-family: "Belleza", sans-serif;
-}
-.footer-link { color: #fff; display: flex; align-items: center; gap: 10px; transition: 0.3s; font-size:0.8rem; }
-.footer-link:hover { opacity: 0.7; }
-.footer-divider { border: 0; border-top: 1px solid #333; margin: 2rem 0; width: 100%; }
-.footer-bottom { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
-.footer-logos { display: flex; gap: 3rem; letter-spacing: 3px; font-size: 0.9rem; }
-.main-footer-logo { color:goldenrod;font-size: 3rem; margin-top: 2rem; letter-spacing: 15px; font-weight: 400; }
-.copyright { font-size: 0.7rem; color: #666; font-family:'Times New Roman', Times, serif;}
-.enterinfo{
-  border:1px solid #858585;
-  border-radius:5px;
-  padding:0.2rem;
+.to-top:hover {
+  color: rgb(6, 15, 0);
+  background: goldenrod;
 }
 
-@media (min-width: 540px) {
-  .video-title { 
-    font-size: 9rem; 
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.footer-label {
+  font-size: 0.8rem;
+  color: goldenrod;
+  font-family: "Belleza", sans-serif;
+}
+
+.footer-link {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  font-size: 0.8rem;
+}
+
+.footer-link:hover {
+  opacity: 0.7;
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.footer-bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logos {
+  display: flex;
+  gap: 3rem;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+.main-footer-logo {
+  color: goldenrod;
+  font-size: 3rem;
+  margin-top: 2rem;
+  letter-spacing: 15px;
+  font-weight: 400;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  color: #666;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.enterinfo {
+  border: 1px solid #858585;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+/* --- Media Queries (Desktop) --- */
+@media (min-width: 768px) {
+  .suit-mobile {
+    display: none;
+  }
+  .suit-desktop {
+    display: block;
+  }
+
+  .video-title {
+    font-size: 8rem;
     letter-spacing: 2rem;
     padding: 0 1rem;
   }
+
   .heading {
     font-size: 3rem;
-    margin: 3rem 0rem;
+    margin: 3rem 0;
   }
-  
-  .subheading { 
-    font-size: 6rem; 
-    top: 15%; 
+
+  .subheading {
+    font-size: 5rem;
+    top: 15%;
   }
-  
-  .subdetail { 
-    font-size: 1rem;
-    top: 25%; 
+
+  .subdetail {
+    font-size: 1.2rem;
+    top: 25%;
     padding: 0 1rem;
   }
 
@@ -318,124 +410,95 @@ a {
   }
 
   .main-footer-logo {
-    font-size: 9rem;
+    font-size: 7rem;
     letter-spacing: 6px;
   }
 
   .linking {
     font-size: 1.3rem;
-    margin: 0rem 2rem;
+    margin: 0 2rem;
     width: 20%;
     height: 4rem;
   }
 
+  /* Fixed Desktop Product Grid Layout */
   .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     width: 100%;
-    max-width: 1920px;
-    gap:0;
-    padding: 6rem 10rem;
+    max-width: 1600px;
+    gap: 2rem;
+    padding: 4rem 2rem;
     margin: 0 auto;
-    justify-content: center;
-    align-content: center;
-    align-items: start;
-    box-sizing: border-box;
   }
 
   .product-card {
     display: flex;
     flex-direction: column;
-    width: 40vh;
-    max-width: 360px;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 0;
     background: #111111;
     cursor: pointer;
     text-align: center;
   }
 
   .product-card img {
-    width: 40vh;
-    height: 100%;
+    width: 100%;
+    height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    display: block;
-    margin: 0;
-    gap:0;
   }
 
   .product-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 1.5rem 1rem;
     background: #000000;
     border-top: 1px solid #222222;
-    width: 100%;
-    box-sizing: border-box;
-    font-size:1.3rem;
+    font-size: 1.1rem;
   }
 
   .product-name {
-    font-size: 1.1rem;
-    color: #ffffff;
-    margin: 0;
-    font-family: sans-serif;
-    text-align: left;
+    font-size: 1rem;
   }
 
   .price {
-    font-size: 1.4rem;
-    color: goldenrod;
-    margin: 0;
-    font-family: sans-serif;
-    text-align: right;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 
   .discrip {
-    padding:3rem 0rem;
-    font-size:1.2rem;
+    padding: 3rem 0;
+    font-size: 1.2rem;
   }
 
   .src1 {
-    display: grid; 
-    grid-template-columns: repeat(2, max-content); 
-    grid-template-rows: 1fr;             
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    gap: 0;                    
-    margin: 0;
-    text-align: center;
-    justify-content: center;   
-    align-items: start;       
-    background: #001d1400;
-    padding: 10rem;
+    max-width: 1200px;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
   }
 
   .latest {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    cursor: pointer;
-    margin-bottom: 0;
-    padding: 0;
-    width: 30vw;               
+    width: 100%;
   }
 
   .latest img {
-    width: 30vw;            
-    height: 50rem;             
-    object-fit: cover;        
-    display: block;           
-    margin: 0;
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
   }
 
-  .footerheading { font-size: 2rem; }
-  .footercontent { font-size: 1.2rem; }
-  .footer-label { font-size: 1rem; }
-  .footer-link { font-size: 1.2rem; }
-  .copyright { font-size: 1rem; }
+  .footerheading {
+    font-size: 2rem;
+  }
+  .footer-label {
+    font-size: 1rem;
+  }
+  .footer-link {
+    font-size: 1.2rem;
+  }
+  .copyright {
+    font-size: 1rem;
+  }
 }
