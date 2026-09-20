@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import {Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from "./pages/Home";
 import Shirt from "./pages/Shirts";
@@ -23,7 +23,7 @@ function App() {
         <Route path="/shirts" element={<Shirt />} />
         <Route path="/tshirts" element={<Tshirt />} />
         <Route path="/hoodies" element={<Hoodies />} />
-        <Route path="/sneakers" element={<Sneaker />} />
+        <Route path="/sneakers" element={<Sneaker />} /> 
         <Route path="/shoes" element={<Shoes />} />
         <Route path="/highend" element={<Highend />} />
         <Route path="/Login" element={<Loginuser/>}/>
