@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: './', // 👈 Works seamlessly with HashRouter on GitHub Pages
+  base: './', 
 })
