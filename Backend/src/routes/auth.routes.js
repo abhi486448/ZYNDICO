@@ -1,6 +1,6 @@
 const express = require("express")
 const userRouter = express.Router()
-const userContriller = require("../controller/user.controller")
+const userContriller = require("../controller/auth.controller")
 
 /**
  * @route POST /api/auth/register

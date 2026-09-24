@@ -9,6 +9,7 @@ import shoes6 from "../assets/images/shoes/1.jpg";
 import shoes7 from "../assets/images/shoes/4.jpg";
 import suit1 from "../assets/images/suit/4.png";
 import CategoryMarquee from "../components/marq";
+import "../form.scss";
 
 function Home() {
 
