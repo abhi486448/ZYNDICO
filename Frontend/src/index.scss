@@ -1,13 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Belleza", sans-serif;
+}
+
 /* --- Global & Root --- */
 :root {
   background: linear-gradient(60deg, #001a09fe, #0c0c0cfe);
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: "Belleza", sans-serif;
+  
   color: #ffffff;
 }
 

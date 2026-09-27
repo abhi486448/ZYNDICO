@@ -1,7 +1,7 @@
 import { Route, Routes} from "react-router"
 
 import React from 'react'
-import Home from "./pages/Home"
+import Home from "./Features/Home"
 import Shirt from "./pages/Shirts"
 import Tshirt from "./pages/Tshirts"
 import Hoodies from "./pages/Hoodies"
