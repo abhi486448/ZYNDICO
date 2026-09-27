@@ -1,7 +1,5 @@
-body{
-  color:#Fff;
-}
-.headingauth{
+
+h1{
   text-align: center;
   margin:1rem;
   font-size:5rem;
@@ -9,7 +7,7 @@ body{
 }
 .form-container {
   margin:12rem auto;
-  width:90%;
+  width:100%;
   color:rgb(255, 255, 255);
   text-align: center;
   font-family: "Montserrat Alternates", sans-serif;
@@ -17,15 +15,25 @@ body{
 .forminfo{
   text-align: center;
 }
-.enterinfo{
-  width:90%;
+input{
   color:#000000;
-  padding:5px;
   font-size:15px;
   margin-top:1rem;
-  background-color:rgba(161, 161, 161, 0.774);
+  background-color: white;
   border-radius:0.3rem;
+
+  
 }
+
+input {
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+}
+
+.enterinfo::placeholder {
+    color: #000000;
+  }
+
 .google-btn {
   margin-top: 15px;
   padding: 5px;
