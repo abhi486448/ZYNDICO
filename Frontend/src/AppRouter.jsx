@@ -9,8 +9,8 @@ import Sneaker from "./pages/Sneaker"
 import Shoes from "./pages/Shoes"
 import Highend from "./pages/Highend"
 import Loginuser from "./Features/Auth/pages/Login"
-import Registeruser from "./Features/Auth/pages/Register"
-import ForgotPassword from "./Authentication/froget"
+import Register from "./Features/Auth/pages/Register"
+import ForgotPassword from "./Features/Auth/pages/Froget"
 import ProductDetails from "./pages/ProductDetails"
 import LandingPage from "./LandingPage"
 
@@ -24,8 +24,8 @@ const AppRouter = () => {
         <Route path="/sneakers" element={<Sneaker />} /> 
         <Route path="/shoes" element={<Shoes />} />
         <Route path="/highend" element={<Highend />} />
-        <Route path="/Login" element={<Loginuser />}/>
-        <Route path="/Register" element={<Registeruser />}/>
+        <Route path="/login" element={<Loginuser />}/>
+        <Route path="/register" element={<Register />}/>
         <Route path="/ForgetPass" element={<ForgotPassword />}/>
         <Route path="/ProductPage/:id" element={<ProductDetails />}/>
       </Routes>

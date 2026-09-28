@@ -1,6 +1,6 @@
 import React from 'react'
 import AppRouter from './AppRouter'
-import './index.scss'
+import './Features/shared/global.scss'
 
 const App = () => {
   return (
