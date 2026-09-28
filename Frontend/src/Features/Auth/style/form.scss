@@ -14,15 +14,17 @@ main {
 
   .form-container {
     @include flex-col(1rem);
-
     min-width: 350px;
     font-family: "Montserrat Alternates", sans-serif;
 
-    h1 {
+    .logheading{
       text-align: center;
-      margin: 1rem;
-      font-size: 5rem;
-      filter: blur(1px);
+      h1{
+        font-size:5rem;
+      }
+      h2{
+        font-size:3rem
+      }
     }
 
     .forget {
@@ -34,7 +36,7 @@ main {
     }
 
     a {
-      color: rgb(219, 169, 42);
+      color: rgb(43, 255, 0);
     }
   }
 
@@ -45,19 +47,9 @@ main {
       border: none;
       outline: none;
       padding-inline: 1rem;
-      padding-block: 0.5rem;
-      border-radius: 1rem;
+      padding-block: 1rem;
+      font-size:1rem;
+      border-radius: 0.5rem;
     }
   }
 }
-
-
-
-
-
-
-
-// .enterinfo::placeholder {
-//   color: #000000;
-// }
-

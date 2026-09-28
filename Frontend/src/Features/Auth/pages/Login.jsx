@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom'
 const Login = () => {
     return (
         <main>
-            <div className="form-container">
-                <h1>Login</h1>
+            <div className="form-container"> 
+                <span className='logheading'>
+                    <h1>Welcome Login</h1>
+                </span>
                 <form>
                     <input type="email" name='email' id='email' placeholder="Enter Email"></input>
                     <input type="Password" name='password' id='password' placeholder="Enter Password"></input>

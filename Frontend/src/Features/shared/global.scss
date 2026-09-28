@@ -8,10 +8,8 @@
 }
 
 html,
-body,
 #root {
     width: 100%;
-    background: linear-gradient(60deg, #001a09fe, #0c0c0cfe);
     color: #ffffff;
 }
 
@@ -20,11 +18,16 @@ a {
   font-family: "Belleza", sans-serif;
   color: inherit;
 }
-
-
-
-
-/* --- Hero / Cover Video Section --- */
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-dark);
+  font-family: "Montserrat Alternates", sans-serif;
+  background-image: radial-gradient(circle at 50% 0%, rgba(0, 54, 27, 0.25) 0%, #002b0ffe 60%);
+  background-repeat: no-repeat;
+}
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -499,7 +502,7 @@ a {
 }
 
 .enterinfo {
-  border: 1px solid #858585;
+  border: 1px solid #0e0d0d;
   border-radius: 5px;
   padding: 0.2rem;
 }

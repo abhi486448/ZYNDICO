@@ -1,18 +1,21 @@
 .button {
+    font-size:1rem;
     border: none;
     outline: none;
     padding-inline: 1rem;
-    padding-block: 0.5rem;
+    padding-block:1rem;
     border-radius: 1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-
     &:active {
         transform: scale(0.9);
     }
 }
 
 .primery-button {
-    background-color: rgb(156, 112, 0);
-    color: black;
+    background-color: rgb(1, 226, 87);
+    color: rgb(15, 6, 6);
+    &:hover{
+        background-color:rgb(0, 211, 0);
+    }
 }
