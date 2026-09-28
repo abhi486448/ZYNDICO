@@ -1,18 +1,18 @@
+@use "./button.scss";
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Belleza", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Belleza", sans-serif;
 }
 
-/* --- Global & Root --- */
-:root {
-  background: linear-gradient(60deg, #001a09fe, #0c0c0cfe);
-}
-
-body {
-  
-  color: #ffffff;
+html,
+body,
+#root {
+    width: 100%;
+    background: linear-gradient(60deg, #001a09fe, #0c0c0cfe);
+    color: #ffffff;
 }
 
 a {
@@ -20,6 +20,9 @@ a {
   font-family: "Belleza", sans-serif;
   color: inherit;
 }
+
+
+
 
 /* --- Hero / Cover Video Section --- */
 .video-wrapper {

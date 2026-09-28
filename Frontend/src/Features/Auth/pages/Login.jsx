@@ -1,5 +1,5 @@
 import React from 'react'
-import "../shared/form.scss"
+import "../style/form.scss"
 import { Link } from 'react-router-dom'
 
 const Login = () => {
@@ -7,18 +7,18 @@ const Login = () => {
         <main>
             <div className="form-container">
                 <h1>Login</h1>
-                <form className="forminfo">
-                    <input type="email" placeholder="Enter Email"></input><br />
-                    <input type="Password" placeholder="Enter Password"></input>
+                <form>
+                    <input type="email" name='email' id='email' placeholder="Enter Email"></input>
+                    <input type="Password" name='password' id='password' placeholder="Enter Password"></input>
 
-                    <button type='submit'>Login</button>
+                    <button className='button primery-button' >Login</button>
                 </form>
                 <Link to="/forgetpass">
-                    <p style={{ marginTop: "20px", marginRight: "15px", fontSize: "15px", textAlign: "right", color: "#ddd", cursor: "pointer" }}>
+                    <p className='forget'>
                         Forgot Password
                     </p>
                 </Link>
-                <Link to="/Register"><button className="google-btn">Countinue with google</button></Link>
+                <p>Don't have an account ? <Link to="/register">Create One.</Link></p>
             </div>
         </main>
     )

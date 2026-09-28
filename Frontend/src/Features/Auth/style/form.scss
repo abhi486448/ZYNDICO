@@ -1,0 +1,63 @@
+@mixin flex-col($gap: 0rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form-container {
+    @include flex-col(1rem);
+
+    min-width: 350px;
+    font-family: "Montserrat Alternates", sans-serif;
+
+    h1 {
+      text-align: center;
+      margin: 1rem;
+      font-size: 5rem;
+      filter: blur(1px);
+    }
+
+    .forget {
+      color: #fff;
+      margin-top: 15px;
+      margin-right: 20px; 
+      font-size: 15px; 
+      text-align: right;
+    }
+
+    a {
+      color: rgb(219, 169, 42);
+    }
+  }
+
+  form {
+    @include flex-col(1rem);
+
+    input {
+      border: none;
+      outline: none;
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      border-radius: 1rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+// .enterinfo::placeholder {
+//   color: #000000;
+// }
+

@@ -1,23 +1,21 @@
 import React from 'react'
-import "../shared/form.scss"
+import { Link } from 'react-router-dom'
+import "../style/form.scss"
 
 const Register = () => {
     return (
         <main>
             <div className="form-container">
-                <h1 className="headingauth">Register</h1>
-                <form className="forminfo">
-                    <input type="text" placeholder="Enter Name" className="enterinfo" /><br />
-                    <input type="email" placeholder="Enter Email" className="enterinfo" /><br />
-                    <input type="password" placeholder="Enter Password" className="enterinfo" /><br />
-                    <input type="password" placeholder="Confirm Password" className="enterinfo" /><br />
-                    <button type="submit" className="google-btn">Register</button>
+                <h1>Register</h1>
+                <form>
+                    <input type="text" name='name' id='name' placeholder="Enter Your Name"></input>
+                    <input type="email" name='email' id='email' placeholder="Enter Email"></input>
+                    <input type="Password" name='password' id='password' placeholder="Enter Password"></input>
+
+                    <button className='button primery-button' >Create</button>
                 </form>
 
-                <Link to="/forgetpass"><p style={{ color: "#fff", marginTop: "15px", marginRight: "20px", fontSize: "15px", textAlign: "right" }}>Already have an account?</p></Link>
-                <div className="social-login">
-                    <button className="google-btn">Continue with Google</button>
-                </div>
+                <p>Already have an account ? <Link to={"/login"}>Login</Link></p>
             </div>
         </main>
     )
