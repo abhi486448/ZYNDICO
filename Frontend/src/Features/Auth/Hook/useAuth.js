@@ -9,24 +9,22 @@ export const useAuth = () => {
 
     async function handleLogin(email, password) {
         setLoading(true)
-
-        const response = await login(email, password)
-
-        setUser(response.user)
-
-        setLoading(false)
-
+        try {
+            const response = await login(email, password)
+            setUser(response.user)
+        } finally {
+            setLoading(false)
+        }
     }
 
     async function handleRegister(username, email, password) {
         setLoading(true)
-
-        const response = await register(username, email, password)
-
-        setUser(response.user)
-
-        setLoading(false)
-
+        try {
+            const response = await register(username, email, password)
+            setUser(response.user)
+        } finally {
+            setLoading(false)
+        }
     }
 
     return {
