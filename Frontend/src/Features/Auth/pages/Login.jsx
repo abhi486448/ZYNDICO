@@ -3,6 +3,7 @@ import "../style/form.scss"
 import { Link } from 'react-router-dom'
 import { useAuth } from "../Hook/useAuth"
 import { useNavigate } from 'react-router-dom'
+import Loadinganimation from '../../shared/components/animation/Loadinganimation'
 
 const Login = () => {
     const { loading, handleLogin } = useAuth()
@@ -24,9 +25,7 @@ const Login = () => {
     }
 
     if(loading){
-        return (<main>
-            <h1>Loading...</h1>
-        </main>)
+        return (<Loadinganimation />)
     }
 
     return (

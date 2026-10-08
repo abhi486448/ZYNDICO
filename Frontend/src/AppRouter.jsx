@@ -13,7 +13,6 @@ import Register from "./Features/Auth/pages/Register"
 import ForgotPassword from "./Features/Auth/pages/Froget"
 import ProductDetails from "./pages/ProductDetails"
 import LandingPage from "./LandingPage"
-import LoadingAnimation from "./Features/shared/components/animation/Loadinganimation"
 
 const AppRouter = () => {
   return (
@@ -29,7 +28,6 @@ const AppRouter = () => {
         <Route path="/register" element={<Register />}/>
         <Route path="/ForgetPass" element={<ForgotPassword />}/>
         <Route path="/ProductPage/:id" element={<ProductDetails />}/>
-        <Route path="/LoadingAnimation/" element={<LoadingAnimation />}/>
       </Routes>
   )
 }
