@@ -5,20 +5,16 @@ const api = axios.create({
 })
 
 export async function login(email, password){
-    try{
         const response = await api.post("/login", {
             email,
             password
         })
 
         return response.data;
-    } catch(err){
-        throw err;
-    }
+    
 }
 
 export async function register(username ,email, password){
-    try{
         const response = await api.post("/register", {
             username,
             email,
@@ -26,7 +22,4 @@ export async function register(username ,email, password){
         })
 
         return response.data;
-    } catch(err){
-        throw err;
-    }
 }
