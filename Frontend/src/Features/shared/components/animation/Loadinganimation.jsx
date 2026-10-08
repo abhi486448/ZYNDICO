@@ -1,7 +1,7 @@
-import React from "react";
-import "./animation.scss";
+import React from 'react'
+import "./animation.scss"
 
-function LoadingAnimation() {
+const Loadinganimation = () => {
   return (
     <main className="loading-container">
       <div className="loader-content">
@@ -13,7 +13,7 @@ function LoadingAnimation() {
         </h1>
       </div>
     </main>
-  );
+  )
 }
 
-export default LoadingAnimation;
+export default Loadinganimation

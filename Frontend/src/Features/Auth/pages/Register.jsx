@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import "../style/form.scss"
 import { useAuth } from '../Hook/useAuth'
 import { useNavigate } from 'react-router-dom'
+import Loadinganimation from '../../shared/components/animation/Loadinganimation'
 
 
 const Register = () => {
@@ -27,9 +28,7 @@ const Register = () => {
     }
 
     if(loading){
-        return (<main>
-            <h1>Please Wait ...</h1>
-        </main>)
+        return (<Loadinganimation />)
     }
 
     return (
