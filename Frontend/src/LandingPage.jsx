@@ -1,5 +1,5 @@
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Footer from "./Features/shared/components/essiential/Footer";
+import Navbar from "./Features/shared/components/essiential/Navbar";
 import Home from "./Features/Home";
 
 

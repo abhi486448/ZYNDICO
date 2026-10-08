@@ -1,0 +1,228 @@
+// ==========================================
+// Variables
+// ==========================================
+$color-goldenrod: goldenrod;
+$color-white: #ffffff;
+$color-dark-bg: #00110ade;
+$color-marquee-bg: #000a07f5;
+$color-hover-green: rgba(0, 95, 29, 0.5);
+
+$font-serif: 'Times New Roman', Times, serif;
+$font-sans: "Montserrat Alternates", sans-serif;
+
+$transition-standard: ease-in 0.2s;
+$transition-smooth: all 0.4s ease-in-out;
+
+// ==========================================
+// Mixins
+// ==========================================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ==========================================
+// Styles
+// ==========================================
+
+/* Outer Circle / Profile Icon */
+.menu {
+  @include flex-center;
+  @include flex-column;
+  color: $color-goldenrod;
+  border: 1px solid $color-goldenrod;
+  border-radius: 50%;
+  padding: 0.25rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  overflow: hidden;
+
+  &1 {
+    background-color: $color-goldenrod;
+    border-radius: 50%;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-bottom: 2px;
+  }
+
+  &2 {
+    background-color: $color-goldenrod;
+    width: 0.7rem;
+    height: 0.4rem;
+    border-radius: 12px 12px 0px 0px;
+  }
+}
+
+/* Navigation Bar */
+.nav {
+  @include flex-column;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background: $color-dark-bg;
+  padding: 5px 10px;
+  backdrop-filter: blur(50px);
+  position: fixed;
+  transition: $transition-smooth;
+
+  &-container {
+    width: 100%;
+  }
+
+  &-header {
+    @include flex-between;
+  }
+
+  &-button {
+    width: 100%;
+    font-family: $font-sans;
+    font-size: 0.8rem;
+    color: $color-goldenrod;
+    transition: $transition-standard;
+    cursor: pointer;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      background: $color-hover-green;
+    }
+  }
+
+  &-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+
+    &.show {
+      max-height: 1000px;
+      transition: max-height 1s ease-in-out;
+      padding-top: 20px;
+    }
+  }
+
+  &-links {
+    @include flex-column;
+    list-style: none;
+    padding: 0 0 20px 0;
+    margin: 0;
+    gap: 20px;
+
+    a {
+      color: $color-white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.logo1 {
+  color: $color-goldenrod;
+  font-family: $font-serif;
+  letter-spacing: 0.3rem;
+  font-size: 100%;
+  font-weight: 400;
+  margin: 0;
+}
+
+.menu-icon {
+  color: $color-goldenrod;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 30px;
+}
+
+/* Marquee Section */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  background: $color-marquee-bg;
+  border-top: 1px solid $color-goldenrod;
+  border-bottom: 1px solid $color-goldenrod;
+  padding: 1rem 0;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 25s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.marquee-item {
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: clamp(0.5rem, 1vw, 0.5rem);
+  color: $color-white;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 6px;
+  padding: 0 4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    color: $color-goldenrod;
+    transform: scale(1.05);
+  }
+}
+
+/* Keyframes */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+// ==========================================
+// Media Queries
+// ==========================================
+@media (min-width: 540px) {
+  .nav {
+    padding: 8px 12px;
+  }
+
+  .logo1 {
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .menu-icon {
+    font-size: 2rem;
+  }
+
+  .menu {
+    width: 2.4rem;
+    height: 2.3rem;
+  }
+
+  .marquee-container {
+    padding: 1.2rem 0;
+  }
+
+  .marquee-item {
+    font-size: clamp(0.8rem, 1.5vw, 0.8rem);
+  }
+}
